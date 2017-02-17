@@ -1,16 +1,16 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "spatie/open-graph",
+    "description": "Easily generate Open Graph tags",
     "keywords": [
         "spatie",
-        ":package_name"
+        "open-graph"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/spatie/open-graph",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Alex Vanderbist",
+            "email": "alex.vanderbist@gmail.com",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
