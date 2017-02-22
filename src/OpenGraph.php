@@ -2,77 +2,68 @@
 
 namespace Spatie\OpenGraph;
 
-use ErrorException;
-use Spatie\OpenGraph\Objects\OpenGraphImage;
-
-class OpenGraph
+class OpenGraph extends OpenGraphObject
 {
     /** @var string */
-    protected $type;
+    protected $type = 'website';
 
-    /** @var string */
-    protected $title;
-
-    /** @var string */
-    protected $url;
-
-    /** @var string */
-    protected $description;
-
-    /** @var string */
-    protected $site_name;
-
-    /** @var string */
-    protected $determiner;
-
-    /** @var array */
-    protected $locale;
-
-    /** @var array */
-    protected $images;
-
-    /** @var array */
-    protected $videos;
-
-    /** @var array */
-    protected $audio;
-
-    /** @var  OpenGraphObject */
-    protected $content;
-
-    public function __construct(string $type, string $title, string $url, $image)
+    public function __construct(string $title, string $url, $image)
     {
-        $this->type = $type;
-        $this->title = $title;
-        $this->url = $url;
+        $this->addTag('type', $this->type, 'og');
+        $this->addTag('title', $title, 'og');
+        $this->addTag('url', $url, 'og');
 
-        if (typeof($image) === string) {
-            $this->addImage(new OpenGraphImage($image));
-        }
-
-        if ($image instanceof OpenGraphImage) {
-            $this->addImage($image);
-        }
+        $this->image($image);
     }
 
-    public static function create(string $type, string $title, string $url, string $image)
+    public static function create(string $title, string $url, $image)
     {
         return new static(...func_get_args());
     }
 
-    public static function __callStatic($methodName, $arguments)
+    public function image($image)
     {
-        $type = OpenGraphTypes::getTypeFromCamelCase($methodName);
-
-        if (! in_array($type, OpenGraphTypes::getAll())) {
-            throw new ErrorException("Type {$type} doesn't exist.");
+        if (is_string($image)) {
+            $image = new OpenGraphImage($image);
         }
 
-        return new static($type, ...$arguments);
+        $this->objects[] = $image;
+
+        return $this;
     }
 
-    public function addImage(OpenGraphImage $image)
+    public function description(string $description)
     {
-        $this->images[] = $image;
+        $this->addTag('description', $description);
+
+        return $this;
+    }
+
+    public function determiner(string $determiner)
+    {
+        $this->addTag('determiner', $determiner);
+
+        return $this;
+    }
+
+    public function locale(string $locale = 'en_US')
+    {
+        $this->addTag('locale', $locale);
+
+        return $this;
+    }
+
+    public function alternateLocale(string $locale = 'en_US')
+    {
+        $this->addTag('locale:alternate', $locale);
+
+        return $this;
+    }
+
+    public function siteName(string $siteName)
+    {
+        $this->addTag('site_name', $siteName);
+
+        return $this;
     }
 }
