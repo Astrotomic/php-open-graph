@@ -1,4 +1,6 @@
-# Very short description of the package
+**THIS DEMO IS CURRENTLY IN DEVELOPMENT, DO NOT USE. ETA FOR COMPLETE VERSION: MARCH 2017**
+
+# Easily generate Open Graph tags
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/open-graph.svg?style=flat-square)](https://packagist.org/packages/spatie/open-graph)
 [![Build Status](https://img.shields.io/travis/spatie/open-graph/master.svg?style=flat-square)](https://travis-ci.org/spatie/open-graph)
