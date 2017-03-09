@@ -9,6 +9,7 @@ class OpenGraphImage extends OpenGraphObject
 
     public function __construct(string $url, string $secureUrl = '', string $type = '', int $width = null, int $height = null)
     {
+        $this->addTag('', $url);
         $this->addTag('url', $url);
         $this->addTag('secure_url', $secureUrl);
         $this->addTag('type', $type);

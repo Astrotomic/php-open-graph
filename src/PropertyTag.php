@@ -27,6 +27,7 @@ class PropertyTag
 
     public function renderHtml(): string
     {
-        return "<meta property=\"{$this->prefix}:{$this->property}\" content=\"{$this->content}\">";
+        $propertySuffix = $this->property ? ":{$this->property}" : '';
+        return "<meta property=\"{$this->prefix}{$propertySuffix}\" content=\"{$this->content}\">";
     }
 }

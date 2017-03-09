@@ -25,7 +25,7 @@ abstract class OpenGraphObject
 
     protected function addTag(string $property, string $content, $prefix = null)
     {
-        if(empty($property) || empty($content))
+        if(empty($content))
         {
             return;
         }

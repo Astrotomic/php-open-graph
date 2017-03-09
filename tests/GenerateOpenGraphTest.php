@@ -6,37 +6,55 @@ use PHPUnit\Framework\TestCase;
 use Spatie\OpenGraph\OpenGraph;
 use Spatie\OpenGraph\OpenGraphBook;
 use Spatie\OpenGraph\OpenGraphImage;
+use Spatie\Snapshots\MatchesSnapshots;
 
 class GenerateOpenGraphTest extends TestCase
 {
+    use MatchesSnapshots;
+
     /** @test */
     public function it_can_generate_basic_metadata()
     {
-        $metaTags = OpenGraph::create('Title', 'www.example.com', 'http://example.com/image.jpg')
-            ->image(OpenGraphImage::create('http://example.com/image2.jpg', 'https://example.com/image2.jpg'))
+        $metaTags = OpenGraph::create('Title', 'http://www.example.com', 'http://example.com/image.jpg')
+            ->getMetaTags();
+
+        $this->assertMatchesSnapshot($metaTags);
+    }
+
+    /** @test */
+    public function it_can_generate_optional_metadata()
+    {
+        $metaTags = OpenGraph::create('Title', 'http://www.example.com', 'http://example.com/image.jpg')
             ->description('This is the page description')
-            ->siteName('Site Name!')
+            ->siteName('Test Name')
             ->locale('en_US')
             ->alternateLocale('nl_BE')
             ->alternateLocale('fr_FR')
             ->getMetaTags();
 
-        echo(PHP_EOL.PHP_EOL.$metaTags);
-
-        $this->assertTrue(true);
+        $this->assertMatchesSnapshot($metaTags);
     }
 
     /** @test */
-    public function it_can_generate_metadata_for_an_object()
+    public function it_can_generate_metadata_for_multiple_images()
     {
-        $metaTags = OpenGraphBook::create('Title', 'www.example.com', 'http://example.com/image.jpg')
+        $metaTags = OpenGraph::create('Title', 'http://www.example.com', 'http://example.com/image.jpg')
             ->image(OpenGraphImage::create('http://example.com/image2.jpg', 'https://example.com/image2.jpg'))
+            ->image(OpenGraphImage::create('http://example.com/image3.jpg', 'https://example.com/image3.jpg', 'image/jpeg', 800, 600))
+            ->getMetaTags();
+
+        $this->assertMatchesSnapshot($metaTags);
+    }
+
+    /** @test */
+    public function it_can_generate_metadata_for_a_book()
+    {
+        $metaTags = OpenGraphBook::create('Title', 'http://www.example.com', 'http://example.com/image.jpg')
             ->author('Haruki Murakami')
+            ->isbn('978-3-16-148410-0')
             ->releaseDate('date')
             ->getMetaTags();
 
-        echo(PHP_EOL.PHP_EOL.$metaTags);
-
-        $this->assertTrue(true);
+        $this->assertMatchesSnapshot($metaTags);
     }
 }

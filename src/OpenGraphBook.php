@@ -13,7 +13,7 @@ class OpenGraphBook extends OpenGraph
     /** @return static */
     public function isbn(string $isbn)
     {
-        $this->addTag('book', 'isbn', $isbn);
+        $this->addTag('isbn', $isbn);
 
         return $this;
     }
