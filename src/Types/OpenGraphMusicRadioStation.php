@@ -1,8 +1,9 @@
 <?php
 
-namespace Spatie\OpenGraph;
+namespace Spatie\OpenGraph\Types;
 
-class OpenGraphMusic extends OpenGraph
+
+class OpenGraphMusic extends OpenGraphBaseType
 {
     /** @var string */
     protected $prefix = 'music';

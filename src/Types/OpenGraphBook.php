@@ -1,8 +1,9 @@
 <?php
 
-namespace Spatie\OpenGraph;
+namespace Spatie\OpenGraph\Types;
 
-class OpenGraphBook extends OpenGraph
+
+class OpenGraphBook extends OpenGraphBaseType
 {
     /** @var string */
     protected $prefix = 'book';
