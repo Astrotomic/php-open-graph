@@ -13,7 +13,7 @@ class OpenGraphMusic extends OpenGraphBaseType
 
     public function creator(string $profile)
     {
-        $this->addTag('creator', $profile);
+        $this->setProperty('creator', $profile);
 
         return $this;
     }

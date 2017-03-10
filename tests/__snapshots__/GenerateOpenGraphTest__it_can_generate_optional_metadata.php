@@ -6,6 +6,5 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="nl_BE">
 <meta property="og:locale:alternate" content="fr_FR">
-<meta property="og:image" content="http://example.com/image.jpg">
-<meta property="og:image:url" content="http://example.com/image.jpg">
+<meta property="og:image" content="http://www.example.com/image.jpg">
 ';

@@ -14,7 +14,7 @@ class OpenGraphBook extends OpenGraphBaseType
     /** @return static */
     public function isbn(string $isbn)
     {
-        $this->addTag('isbn', $isbn);
+        $this->setProperty('isbn', $isbn);
 
         return $this;
     }
@@ -22,7 +22,7 @@ class OpenGraphBook extends OpenGraphBaseType
     /** @return static */
     public function author(string $author)
     {
-        $this->addTag('author', $author);
+        $this->setProperty('author', $author);
 
         return $this;
     }
@@ -30,15 +30,19 @@ class OpenGraphBook extends OpenGraphBaseType
     /** @return static */
     public function releaseDate(string $release_date)
     {
-        $this->addTag('release_date', $release_date);
+        $this->setProperty('release_date', $release_date);
 
         return $this;
     }
 
-    /** @return static */
-    public function tag(string $tag)
+    /**
+     * @param string $tag
+     *
+     * @return static
+     */
+    public function addTag(string $tag)
     {
-        $this->addTag('tag', $tag);
+        $this->addProperty('tag', $tag);
 
         return $this;
     }
