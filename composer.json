@@ -1,13 +1,18 @@
 {
-    "name": "spatie/open-graph",
+    "name": "astrotomic/open-graph",
     "description": "Easily generate Open Graph tags",
     "keywords": [
-        "spatie",
         "open-graph"
     ],
-    "homepage": "https://github.com/spatie/open-graph",
+    "homepage": "https://github.com/astrotomic/open-graph",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Tom Witkowski",
+            "email": "gummibeer@astrotomic.info",
+            "homepage": "https://astrotomic.info",
+            "role": "Developer"
+        },
         {
             "name": "Alex Vanderbist",
             "email": "alex.vanderbist@gmail.com",
@@ -16,20 +21,20 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "spatie/phpunit-snapshot-assertions": "^0.2.0"
+        "php": "^7.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^9.0",
+        "spatie/phpunit-snapshot-assertions": "^4.2"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\OpenGraph\\": "src"
+            "Astrotomic\\OpenGraph\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\OpenGraph\\Test\\": "tests"
+            "Astrotomic\\OpenGraph\\Test\\": "tests"
         }
     },
     "scripts": {

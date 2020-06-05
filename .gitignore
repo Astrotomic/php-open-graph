@@ -1,4 +1,2 @@
-build
-composer.lock
-docs
-vendor
+/composer.lock
+/vendor/
