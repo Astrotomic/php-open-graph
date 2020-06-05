@@ -27,6 +27,9 @@
         "phpunit/phpunit": "^9.0",
         "spatie/phpunit-snapshot-assertions": "^4.2"
     },
+    "config": {
+        "sort-packages": true
+    },
     "autoload": {
         "psr-4": {
             "Astrotomic\\OpenGraph\\": "src"
@@ -39,8 +42,5 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
-    },
-    "config": {
-        "sort-packages": true
     }
 }
