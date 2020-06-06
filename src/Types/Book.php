@@ -11,9 +11,9 @@ class Book extends Type
 
     protected string $type = 'book';
 
-    public function author(string $author)
+    public function author(string $url)
     {
-        $this->addProperty(self::PREFIX, 'author', $author);
+        $this->addProperty(self::PREFIX, 'author', $url);
 
         return $this;
     }
