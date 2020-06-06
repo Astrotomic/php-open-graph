@@ -2,7 +2,9 @@
 
 namespace Astrotomic\OpenGraph;
 
+use Astrotomic\OpenGraph\StructuredProperties\Audio;
 use Astrotomic\OpenGraph\StructuredProperties\Image;
+use Astrotomic\OpenGraph\StructuredProperties\Video;
 
 abstract class Type extends BaseObject
 {
@@ -71,12 +73,47 @@ abstract class Type extends BaseObject
         return $this;
     }
 
+    /**
+     * @param Image|string $image
+     *
+     * @return $this
+     */
     public function image($image)
     {
         $this->addStructuredProperty(
             is_string($image)
                 ? Image::make($image)
                 : $image
+        );
+
+        return $this;
+    }
+
+    /**
+     * @param Video|string $video
+     * @return $this
+     */
+    public function video($video)
+    {
+        $this->addStructuredProperty(
+            is_string($video)
+                ? Image::make($video)
+                : $video
+        );
+
+        return $this;
+    }
+
+    /**
+     * @param Audio|string $audio
+     * @return $this
+     */
+    public function audio($audio)
+    {
+        $this->addStructuredProperty(
+            is_string($audio)
+                ? Image::make($audio)
+                : $audio
         );
 
         return $this;
