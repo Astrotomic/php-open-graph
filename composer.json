@@ -36,9 +36,9 @@
             "Astrotomic\\OpenGraph\\": "src"
         }
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "test": "vendor/bin/pest"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
