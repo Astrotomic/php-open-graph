@@ -12,12 +12,6 @@
             "email": "gummibeer@astrotomic.info",
             "homepage": "https://astrotomic.info",
             "role": "Developer"
-        },
-        {
-            "name": "Alex Vanderbist",
-            "email": "alex.vanderbist@gmail.com",
-            "homepage": "https://spatie.be",
-            "role": "Developer"
         }
     ],
     "require": {
