@@ -27,7 +27,7 @@ use Astrotomic\OpenGraph\StructuredProperties\Image;
 echo OpenGraph::website('Example')
     ->url('https://example.com')
     ->image('https://example.com/image1.jpg')
-    ->image(Image::make('https://example.com/image1.jpg')->width(600));
+    ->image(Image::make('https://example.com/image2.jpg')->width(600));
 ```
 
 ```html
@@ -35,7 +35,7 @@ echo OpenGraph::website('Example')
 <meta property="og:title" content="Example">
 <meta property="og:url" content="https://example.com">
 <meta property="og:image:url" content="https://example.com/image1.jpg">
-<meta property="og:image:url" content="https://example.com/image1.jpg">
+<meta property="og:image:url" content="https://example.com/image2.jpg">
 <meta property="og:image:width" content="600">
 ```
 
