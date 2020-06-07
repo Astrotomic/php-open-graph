@@ -1,15 +1,10 @@
 <?php
 
 use Astrotomic\OpenGraph\StructuredProperties\Image;
-use Astrotomic\OpenGraph\Type;
-use Astrotomic\OpenGraph\Types\Article;
-use Astrotomic\OpenGraph\Types\Book;
-use Astrotomic\OpenGraph\Types\Profile;
 use Astrotomic\OpenGraph\Types\Video\Episode;
 use Astrotomic\OpenGraph\Types\Video\Movie;
 use Astrotomic\OpenGraph\Types\Video\Other;
 use Astrotomic\OpenGraph\Types\Video\TvShow;
-use Astrotomic\OpenGraph\Types\Website;
 
 it('can generate movie tags', function () {
     $og = Movie::make('Title | Example')
@@ -34,10 +29,9 @@ it('can generate movie tags', function () {
         ->writer('http://www.example.com/writer')
         ->duration(60 * 90)
         ->tag('Crime')
-        ->tag('Thriller')
-    ;
+        ->tag('Thriller');
 
-    assertMatchesHtmlSnapshot((string)$og);
+    assertMatchesHtmlSnapshot((string) $og);
 })->group('video');
 
 it('can generate tv show tags', function () {
@@ -53,10 +47,9 @@ it('can generate tv show tags', function () {
         ->actor('http://www.example.com/actor', 'role')
         ->director('http://www.example.com/director')
         ->writer('http://www.example.com/writer')
-        ->tag('Crime')
-    ;
+        ->tag('Crime');
 
-    assertMatchesHtmlSnapshot((string)$og);
+    assertMatchesHtmlSnapshot((string) $og);
 })->group('video');
 
 it('can generate episode tags', function () {
@@ -74,10 +67,9 @@ it('can generate episode tags', function () {
         ->actor('http://www.example.com/actor', 'role')
         ->director('http://www.example.com/director')
         ->writer('http://www.example.com/writer')
-        ->tag('Crime')
-    ;
+        ->tag('Crime');
 
-    assertMatchesHtmlSnapshot((string)$og);
+    assertMatchesHtmlSnapshot((string) $og);
 })->group('video');
 
 it('can generate other tags', function () {
@@ -95,8 +87,7 @@ it('can generate other tags', function () {
         ->actor('http://www.example.com/actor', 'role')
         ->director('http://www.example.com/director')
         ->writer('http://www.example.com/writer')
-        ->tag('Crime')
-    ;
+        ->tag('Crime');
 
-    assertMatchesHtmlSnapshot((string)$og);
+    assertMatchesHtmlSnapshot((string) $og);
 })->group('video');

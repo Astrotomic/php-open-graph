@@ -1,6 +1,5 @@
 <?php
 
-use Astrotomic\OpenGraph\Type;
 use Astrotomic\OpenGraph\Types\Article;
 use Astrotomic\OpenGraph\Types\Book;
 use Astrotomic\OpenGraph\Types\Profile;
@@ -13,10 +12,9 @@ it('can generate website tags', function () {
         ->locale('en_US')
         ->alternateLocale('en_GB')
         ->siteName('Example')
-        ->image('http://www.example.com/image1.jpg')
-    ;
+        ->image('http://www.example.com/image1.jpg');
 
-    assertMatchesHtmlSnapshot((string)$og);
+    assertMatchesHtmlSnapshot((string) $og);
 })->group('global');
 
 it('can generate article tags', function () {
@@ -32,10 +30,9 @@ it('can generate article tags', function () {
         ->modifiedAt(new DateTime('2020-06-07 20:00:00'))
         ->author('http://www.example.com/author')
         ->section('Technology')
-        ->tag('PHP')
-    ;
+        ->tag('PHP');
 
-    assertMatchesHtmlSnapshot((string)$og);
+    assertMatchesHtmlSnapshot((string) $og);
 })->group('global');
 
 it('can generate book tags', function () {
@@ -50,10 +47,9 @@ it('can generate book tags', function () {
         ->releasedAt(new DateTime('2020-06-05'))
         ->isbn('978-3-86680-192-9')
         ->author('http://www.example.com/author')
-        ->tag('PHP')
-    ;
+        ->tag('PHP');
 
-    assertMatchesHtmlSnapshot((string)$og);
+    assertMatchesHtmlSnapshot((string) $og);
 })->group('global');
 
 it('can generate profile tags', function () {
@@ -68,8 +64,7 @@ it('can generate profile tags', function () {
         ->firstName('Jane')
         ->lastName('Doe')
         ->username('janedoe')
-        ->gender('female')
-    ;
+        ->gender('female');
 
-    assertMatchesHtmlSnapshot((string)$og);
+    assertMatchesHtmlSnapshot((string) $og);
 })->group('global');

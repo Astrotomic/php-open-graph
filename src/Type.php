@@ -14,7 +14,7 @@ abstract class Type extends BaseObject
     {
         $this->setProperty('og', 'type', $this->type);
 
-        if(is_string($title)) {
+        if (is_string($title)) {
             $this->title($title);
         }
     }
