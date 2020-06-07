@@ -8,7 +8,7 @@
 [![StyleCI](https://styleci.io/repos/82821437/shield)](https://styleci.io/repos/82821437)
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/php-open-graph.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/astrotomic/php-open-graph)
 
-This package provides a fluent PHP OOP builder for [Open Graph protocol](https://ogp.me).
+This package provides a fluent PHP OOP builder for [Open Graph protocol](https://ogp.me) and [Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards).
 
 ## Installation
 
@@ -61,6 +61,12 @@ echo OpenGraph::website('Example')
 * `\Astrotomic\OpenGraph\Types\Video\TvShow`
 * `\Astrotomic\OpenGraph\Types\Video\Episode`
 * `\Astrotomic\OpenGraph\Types\Video\Other`
+
+#### Twitter
+
+* `\Astrotomic\OpenGraph\Types\Twitter\Summary`
+* `\Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage`
+* `\Astrotomic\OpenGraph\Types\Twitter\Player`
 
 ### Structured Properties
 
