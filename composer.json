@@ -19,8 +19,7 @@
     },
     "require-dev": {
         "pestphp/pest": "^0.1.5",
-        "spatie/pest-plugin-snapshots": "^0.1.0",
-        "spatie/phpunit-snapshot-assertions": "^4.2"
+        "spatie/pest-plugin-snapshots": "^0.1.0"
     },
     "config": {
         "sort-packages": true
