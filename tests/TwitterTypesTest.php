@@ -1,12 +1,8 @@
 <?php
 
-use Astrotomic\OpenGraph\Types\Article;
-use Astrotomic\OpenGraph\Types\Book;
-use Astrotomic\OpenGraph\Types\Profile;
 use Astrotomic\OpenGraph\Types\Twitter\Player;
 use Astrotomic\OpenGraph\Types\Twitter\Summary;
 use Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage;
-use Astrotomic\OpenGraph\Types\Website;
 
 it('can generate summary tags', function () {
     $og = Summary::make('Title | Example')
