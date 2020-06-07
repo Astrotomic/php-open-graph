@@ -31,7 +31,7 @@ it('can generate song tags', function () {
     ;
 
     assertMatchesHtmlSnapshot((string)$og);
-});
+})->group('music');
 
 it('can generate album tags', function () {
     $og = Album::make('Title | Example')
@@ -51,7 +51,7 @@ it('can generate album tags', function () {
     ;
 
     assertMatchesHtmlSnapshot((string)$og);
-});
+})->group('music');
 
 it('can generate playlist tags', function () {
     $og = Playlist::make('Title | Example')
@@ -70,7 +70,7 @@ it('can generate playlist tags', function () {
     ;
 
     assertMatchesHtmlSnapshot((string)$og);
-});
+})->group('music');
 
 it('can generate radiostation tags', function () {
     $og = RadioStation::make('Title | Example')
@@ -85,4 +85,4 @@ it('can generate radiostation tags', function () {
     ;
 
     assertMatchesHtmlSnapshot((string)$og);
-});
+})->group('music');

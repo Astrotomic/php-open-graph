@@ -17,7 +17,7 @@ it('can generate website tags', function () {
     ;
 
     assertMatchesHtmlSnapshot((string)$og);
-});
+})->group('global');
 
 it('can generate article tags', function () {
     $og = Article::make('Article | Example')
@@ -36,7 +36,7 @@ it('can generate article tags', function () {
     ;
 
     assertMatchesHtmlSnapshot((string)$og);
-});
+})->group('global');
 
 it('can generate book tags', function () {
     $og = Book::make('Book | Example')
@@ -54,7 +54,7 @@ it('can generate book tags', function () {
     ;
 
     assertMatchesHtmlSnapshot((string)$og);
-});
+})->group('global');
 
 it('can generate profile tags', function () {
     $og = Profile::make('Profile | Example')
@@ -72,4 +72,4 @@ it('can generate profile tags', function () {
     ;
 
     assertMatchesHtmlSnapshot((string)$og);
-});
+})->group('global');
