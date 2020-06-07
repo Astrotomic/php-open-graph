@@ -14,7 +14,7 @@ class TvShow extends Type
     public function actor(string $url, ?string $role = null)
     {
         $this->addProperty(self::PREFIX, 'actor', $url);
-        $this->when($role, fn(Movie $movie) => $movie->addProperty(self::PREFIX, 'actor:role', $role));
+        $this->when($role, fn() => $this->addProperty(self::PREFIX, 'actor:role', $role));
 
         return $this;
     }
@@ -29,13 +29,6 @@ class TvShow extends Type
     public function writer(string $url)
     {
         $this->addProperty(self::PREFIX, 'writer', $url);
-
-        return $this;
-    }
-
-    public function duration(int $seconds)
-    {
-        $this->setProperty(self::PREFIX, 'duration', $seconds);
 
         return $this;
     }
