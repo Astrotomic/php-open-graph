@@ -24,7 +24,8 @@
         "php": "^7.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.0",
+        "pestphp/pest": "^0.1.5",
+        "spatie/pest-plugin-snapshots": "^0.1.0",
         "spatie/phpunit-snapshot-assertions": "^4.2"
     },
     "config": {
@@ -35,12 +36,9 @@
             "Astrotomic\\OpenGraph\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Astrotomic\\OpenGraph\\Test\\": "tests"
-        }
-    },
     "scripts": {
-        "test": "vendor/bin/phpunit"
-    }
+        "test": "vendor/bin/pest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
