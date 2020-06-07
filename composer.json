@@ -1,5 +1,5 @@
 {
-    "name": "astrotomic/open-graph",
+    "name": "astrotomic/php-open-graph",
     "description": "Easily generate Open Graph tags",
     "keywords": [
         "open-graph"
