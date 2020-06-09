@@ -6,7 +6,7 @@ use Astrotomic\OpenGraph\BaseObject;
 
 class Audio extends BaseObject
 {
-    protected const PREFIX = 'og:video';
+    protected const PREFIX = 'og:audio';
 
     public function __construct(string $url)
     {
