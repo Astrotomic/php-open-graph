@@ -9,7 +9,7 @@ abstract class TwitterType extends BaseObject
     public function __construct(?string $title = null)
     {
         $this->setProperty(self::PREFIX, 'card', $this->type);
-        $this->when(!empty($title), fn () => $this->title($title));
+        $this->when(! empty($title), fn () => $this->title($title));
     }
 
     public static function make(?string $title = null)
@@ -41,7 +41,7 @@ abstract class TwitterType extends BaseObject
     public function image(string $image, ?string $alt = null)
     {
         $this->setProperty(self::PREFIX, 'image', $image);
-        $this->when(!empty($alt), fn () => $this->setProperty(self::PREFIX, 'image:alt', $alt));
+        $this->when(! empty($alt), fn () => $this->setProperty(self::PREFIX, 'image:alt', $alt));
 
         return $this;
     }
