@@ -32,7 +32,7 @@ it('can generate movie tags', function () {
         ->tag('Thriller');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('video');
+})->group('video', 'movie');
 
 it('can generate tv show tags', function () {
     $og = TvShow::make('Title | Example')
@@ -50,7 +50,7 @@ it('can generate tv show tags', function () {
         ->tag('Crime');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('video');
+})->group('video', 'tv_show');
 
 it('can generate episode tags', function () {
     $og = Episode::make('Title | Example')
@@ -70,7 +70,7 @@ it('can generate episode tags', function () {
         ->tag('Crime');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('video');
+})->group('video', 'episode');
 
 it('can generate other tags', function () {
     $og = Other::make('Title | Example')
@@ -90,4 +90,4 @@ it('can generate other tags', function () {
         ->tag('Crime');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('video');
+})->group('video', 'other');

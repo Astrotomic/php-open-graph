@@ -11,16 +11,17 @@ it('can generate summary tags', function () {
         ->image('http://www.example.com/image1.jpg', 'Image alternate text');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('twitter');
+})->group('twitter', 'summary');
 
 it('can generate summary with large image tags', function () {
     $og = SummaryLargeImage::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
+        ->creator('@devgummibeer')
         ->image('http://www.example.com/image1.jpg', 'Image alternate text');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('twitter');
+})->group('twitter', 'summary_large_image');
 
 it('can generate player tags', function () {
     $og = Player::make('Title | Example')
@@ -30,4 +31,4 @@ it('can generate player tags', function () {
         ->player('http://www.example.com/player.iframe', 1920, 1080);
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('twitter');
+})->group('twitter', 'player');

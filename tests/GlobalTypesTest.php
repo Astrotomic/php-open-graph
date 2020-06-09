@@ -15,7 +15,19 @@ it('can generate website tags', function () {
         ->image('http://www.example.com/image1.jpg');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('global');
+})->group('global', 'website');
+
+it('can generate website tags with stringable image', function () {
+    $og = Website::make('Title | Example')
+        ->url('http://www.example.com')
+        ->description('Description')
+        ->locale('en_US')
+        ->alternateLocale('en_GB')
+        ->siteName('Example')
+        ->image(new class() { public function __toString() { return 'http://www.example.com/image1.jpg'; }});
+
+    assertMatchesHtmlSnapshot((string) $og);
+})->group('global', 'website');
 
 it('can generate article tags', function () {
     $og = Article::make('Article | Example')
@@ -33,7 +45,7 @@ it('can generate article tags', function () {
         ->tag('PHP');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('global');
+})->group('global', 'article');
 
 it('can generate book tags', function () {
     $og = Book::make('Book | Example')
@@ -50,7 +62,7 @@ it('can generate book tags', function () {
         ->tag('PHP');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('global');
+})->group('global', 'book');
 
 it('can generate profile tags', function () {
     $og = Profile::make('Profile | Example')
@@ -67,4 +79,4 @@ it('can generate profile tags', function () {
         ->gender('female');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('global');
+})->group('global', 'profile');

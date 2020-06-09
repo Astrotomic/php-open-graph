@@ -20,7 +20,7 @@ it('can generate song tags', function () {
         ->album('http://www.example.com/album', 1, 4);
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('music');
+})->group('music', 'song');
 
 it('can generate album tags', function () {
     $og = Album::make('Title | Example')
@@ -39,7 +39,7 @@ it('can generate album tags', function () {
         ->releasedAt(new DateTime('2020-06-05'));
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('music');
+})->group('music', 'album');
 
 it('can generate playlist tags', function () {
     $og = Playlist::make('Title | Example')
@@ -57,7 +57,7 @@ it('can generate playlist tags', function () {
         ->song('http://www.example.com/song4', 1, 4);
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('music');
+})->group('music', 'playlist');
 
 it('can generate radiostation tags', function () {
     $og = RadioStation::make('Title | Example')
@@ -71,4 +71,4 @@ it('can generate radiostation tags', function () {
         ->creator('http://www.example.com/creator');
 
     assertMatchesHtmlSnapshot((string) $og);
-})->group('music');
+})->group('music', 'radio_station');
