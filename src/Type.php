@@ -13,7 +13,7 @@ abstract class Type extends BaseObject
     public function __construct(?string $title = null)
     {
         $this->setProperty('og', 'type', $this->type);
-        $this->when($title, fn () => $this->title($title));
+        $this->when(!empty($title), fn () => $this->title($title));
     }
 
     public static function make(?string $title = null)

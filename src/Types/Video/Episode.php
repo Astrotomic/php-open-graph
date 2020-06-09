@@ -21,7 +21,7 @@ class Episode extends Type
     public function actor(string $url, ?string $role = null)
     {
         $this->addProperty(self::PREFIX, 'actor', $url);
-        $this->when($role, fn () => $this->addProperty(self::PREFIX, 'actor:role', $role));
+        $this->when(!empty($role), fn () => $this->addProperty(self::PREFIX, 'actor:role', $role));
 
         return $this;
     }
