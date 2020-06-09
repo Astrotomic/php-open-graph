@@ -78,9 +78,9 @@ abstract class Type extends BaseObject
     public function image($image)
     {
         $this->addStructuredProperty(
-            is_string($image)
-                ? Image::make($image)
-                : $image
+            $image instanceof Image
+                ? $image
+                : Image::make($image)
         );
 
         return $this;
@@ -93,9 +93,9 @@ abstract class Type extends BaseObject
     public function video($video)
     {
         $this->addStructuredProperty(
-            is_string($video)
-                ? Image::make($video)
-                : $video
+            $video instanceof Video
+                ? $video
+                : Video::make($video)
         );
 
         return $this;
@@ -108,9 +108,9 @@ abstract class Type extends BaseObject
     public function audio($audio)
     {
         $this->addStructuredProperty(
-            is_string($audio)
-                ? Image::make($audio)
-                : $audio
+            $audio instanceof Audio
+                ? $audio
+                : Audio::make($audio)
         );
 
         return $this;
