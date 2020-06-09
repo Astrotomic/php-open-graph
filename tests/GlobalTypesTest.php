@@ -24,7 +24,12 @@ it('can generate website tags with stringable image', function () {
         ->locale('en_US')
         ->alternateLocale('en_GB')
         ->siteName('Example')
-        ->image(new class() { public function __toString() { return 'http://www.example.com/image1.jpg'; }});
+        ->image(new class() {
+            public function __toString()
+            {
+                return 'http://www.example.com/image1.jpg';
+            }
+        });
 
     assertMatchesHtmlSnapshot((string) $og);
 })->group('global', 'website');
