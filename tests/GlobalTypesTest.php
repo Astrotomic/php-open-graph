@@ -39,8 +39,8 @@ it('can generate website tags with conditional callbacks', function () {
         ->url('http://www.example.com')
         ->description('Description')
         ->locale('en_US')
-        ->when(false, fn(Website $og) => $og->alternateLocale('de_DE'))
-        ->when(true, fn(Website $og) => $og->alternateLocale('en_GB'))
+        ->when(false, fn (Website $og) => $og->alternateLocale('de_DE'))
+        ->when(true, fn (Website $og) => $og->alternateLocale('en_GB'))
         ->siteName('Example')
         ->image('http://www.example.com/image1.jpg');
 

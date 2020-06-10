@@ -16,7 +16,7 @@ class ConditionalProxy
 
     public function __call(string $name, array $arguments)
     {
-        if($this->condition) {
+        if ($this->condition) {
             call_user_func_array([$this->object, $name], $arguments);
         }
 
