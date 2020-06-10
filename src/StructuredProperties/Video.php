@@ -4,52 +4,46 @@ namespace Astrotomic\OpenGraph\StructuredProperties;
 
 use Astrotomic\OpenGraph\BaseObject;
 
-class Video extends BaseObject
-{
+class Video extends BaseObject{
+
     protected const PREFIX = 'og:video';
 
-    public function __construct(string $url)
-    {
-        $this->setProperty(self::PREFIX, 'url', $url);
+    public function __construct(string $url,$useSubProperty=false){
+        $this->setProperty(self::PREFIX, $useSubProperty?'url':'', $url);
     }
 
-    public static function make(string $url)
-    {
-        return new static($url);
+    public static function make(string $url,$useSubProperty=false){
+        return new static($url,$useSubProperty);
     }
 
-    public function secureUrl(string $url)
-    {
+    public function secureUrl(string $url){
         $this->setProperty(self::PREFIX, 'secure_url', $url);
 
         return $this;
     }
 
-    public function mimeType(string $mimeType)
-    {
+    public function mimeType(string $mimeType){
         $this->setProperty(self::PREFIX, 'type', $mimeType);
 
         return $this;
     }
 
-    public function width(int $width)
-    {
+    public function width(int $width){
         $this->setProperty(self::PREFIX, 'width', $width);
 
         return $this;
     }
 
-    public function height(int $height)
-    {
+    public function height(int $height){
         $this->setProperty(self::PREFIX, 'height', $height);
 
         return $this;
     }
 
-    public function alt(string $alt)
-    {
+    public function alt(string $alt){
         $this->setProperty(self::PREFIX, 'alt', $alt);
 
         return $this;
     }
+
 }

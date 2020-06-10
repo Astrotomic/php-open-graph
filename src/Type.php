@@ -1,123 +1,110 @@
 <?php
-
 namespace Astrotomic\OpenGraph;
 
 use Astrotomic\OpenGraph\StructuredProperties\Audio;
 use Astrotomic\OpenGraph\StructuredProperties\Image;
 use Astrotomic\OpenGraph\StructuredProperties\Video;
 
-abstract class Type extends BaseObject
-{
-    protected string $type;
+abstract class Type extends BaseObject{
 
-    public function __construct(?string $title = null)
-    {
-        $this->setProperty('og', 'type', $this->type);
-        $this->when(! empty($title), fn () => $this->title($title));
-    }
+	protected string $type;
 
-    public static function make(?string $title = null)
-    {
-        return new static($title);
-    }
+	public function __construct(?string $title = null){
+		$this->setProperty('og', 'type', $this->type);
+		$this->when(! empty($title), fn () => $this->title($title));
+	}
 
-    public function title(string $title)
-    {
-        $this->setProperty('og', 'title', $title);
+	public static function make(?string $title = null){
+		return new static($title);
+	}
 
-        return $this;
-    }
+	public function title(string $title){
+		$this->setProperty('og', 'title', $title);
 
-    public function url(string $url)
-    {
-        $this->setProperty('og', 'url', $url);
+		return $this;
+	}
 
-        return $this;
-    }
+	public function url(string $url){
+		$this->setProperty('og', 'url', $url);
 
-    public function description(string $description)
-    {
-        $this->setProperty('og', 'description', $description);
+		return $this;
+	}
 
-        return $this;
-    }
+	public function description(string $description){
+		$this->setProperty('og', 'description', $description);
 
-    public function determiner(string $determiner)
-    {
-        $this->setProperty('og', 'determiner', $determiner);
+		return $this;
+	}
 
-        return $this;
-    }
+	public function determiner(string $determiner){
+		$this->setProperty('og', 'determiner', $determiner);
 
-    public function locale(string $locale)
-    {
-        $this->setProperty('og', 'locale', $locale);
+		return $this;
+	}
 
-        return $this;
-    }
+	public function locale(string $locale){
+		$this->setProperty('og', 'locale', $locale);
 
-    public function siteName(string $locale)
-    {
-        $this->setProperty('og', 'site_name', $locale);
+		return $this;
+	}
 
-        return $this;
-    }
+	public function siteName(string $locale){
+		$this->setProperty('og', 'site_name', $locale);
 
-    public function alternateLocale(string $locale)
-    {
-        $this->addProperty('og', 'locale:alternate', $locale);
+		return $this;
+	}
 
-        return $this;
-    }
+	public function alternateLocale(string $locale){
+		$this->addProperty('og', 'locale:alternate', $locale);
 
-    /**
-     * @param Image|string $image
-     *
-     * @return $this
-     */
-    public function image($image)
-    {
-        $this->addStructuredProperty(
-            $image instanceof Image
-                ? $image
-                : Image::make($image)
-        );
+		return $this;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param Image|string $image
+	 *
+	 * @return $this
+	 */
+	public function image($image){
+		$this->addStructuredProperty(
+			$image instanceof Image
+				? $image
+				: Image::make($image)
+		);
 
-    /**
-     * @param Video|string $video
-     * @return $this
-     */
-    public function video($video)
-    {
-        $this->addStructuredProperty(
-            $video instanceof Video
-                ? $video
-                : Video::make($video)
-        );
+		return $this;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param Video|string $video
+	 * @return $this
+	 */
+	public function video($video){
+		$this->addStructuredProperty(
+			$video instanceof Video
+				? $video
+				: Video::make($video)
+		);
 
-    /**
-     * @param Audio|string $audio
-     * @return $this
-     */
-    public function audio($audio)
-    {
-        $this->addStructuredProperty(
-            $audio instanceof Audio
-                ? $audio
-                : Audio::make($audio)
-        );
+		return $this;
+	}
 
-        return $this;
-    }
+	/**
+	 * @param Audio|string $audio
+	 * @return $this
+	 */
+	public function audio($audio){
+		$this->addStructuredProperty(
+			$audio instanceof Audio
+				? $audio
+				: Audio::make($audio)
+		);
 
-    protected function addStructuredProperty(BaseObject $property)
-    {
-        $this->tags[] = $property;
-    }
+		return $this;
+	}
+
+	protected function addStructuredProperty(BaseObject $property){
+		$this->tags[] = $property;
+	}
+
 }
