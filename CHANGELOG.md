@@ -2,6 +2,10 @@
 
 All notable changes to `php-open-graph` will be documented in this file
 
+## 0.2.3 - 2020-06-10
+
+- add `\Astrotomic\OpenGraph\ConditionalProxy` to allow calling `when()` without callback
+
 ## 0.2.2 - 2020-06-09
 
 - fix `\Astrotomic\OpenGraph\StructuredProperties\Audio` prefix
