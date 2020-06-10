@@ -9,8 +9,18 @@ abstract class BaseObject
     /** @var BaseObject[] */
     protected array $tags = [];
 
-    public function when(bool $condition, Closure $callback)
+    /**
+     * @param $condition
+     * @param Closure|null $callback
+     *
+     * @return $this|ConditionalProxy
+     */
+    public function when($condition, ?Closure $callback = null)
     {
+        if ($callback === null) {
+            return new ConditionalProxy($this, boolval($condition));
+        }
+
         if ($condition) {
             $callback($this);
         }

@@ -34,6 +34,32 @@ it('can generate website tags with stringable image', function () {
     assertMatchesHtmlSnapshot((string) $og);
 })->group('global', 'website');
 
+it('can generate website tags with conditional callbacks', function () {
+    $og = Website::make('Title | Example')
+        ->url('http://www.example.com')
+        ->description('Description')
+        ->locale('en_US')
+        ->when(false, fn(Website $og) => $og->alternateLocale('de_DE'))
+        ->when(true, fn(Website $og) => $og->alternateLocale('en_GB'))
+        ->siteName('Example')
+        ->image('http://www.example.com/image1.jpg');
+
+    assertMatchesHtmlSnapshot((string) $og);
+})->group('global', 'website');
+
+it('can generate website tags with conditional proxies', function () {
+    $og = Website::make('Title | Example')
+        ->url('http://www.example.com')
+        ->description('Description')
+        ->locale('en_US')
+        ->when(false)->alternateLocale('de_DE')
+        ->when(true)->alternateLocale('en_GB')
+        ->siteName('Example')
+        ->image('http://www.example.com/image1.jpg');
+
+    assertMatchesHtmlSnapshot((string) $og);
+})->group('global', 'website');
+
 it('can generate article tags', function () {
     $og = Article::make('Article | Example')
         ->url('http://www.example.com/article')
