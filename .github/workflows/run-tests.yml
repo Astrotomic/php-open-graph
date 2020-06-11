@@ -27,7 +27,7 @@ jobs:
         with:
           path: ~/.composer/cache/files
           key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
-          keys: |
+          restore-keys: |
             dependencies-php-${{ matrix.php }}-composer-
             dependencies-php-
 
