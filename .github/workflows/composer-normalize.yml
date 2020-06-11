@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - 'composer.json'
+  pr:
+    paths:
+      - 'composer.json'
 
 jobs:
   normalize:
