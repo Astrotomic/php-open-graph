@@ -2,6 +2,10 @@
 
 All notable changes to `php-open-graph` will be documented in this file
 
+## 0.2.4 - 2020-06-11
+
+- integrate `astrotomic/php-conditional-proxy` to call methods conditionally
+
 ## 0.2.3 - 2020-06-10
 
 - add `\Astrotomic\OpenGraph\ConditionalProxy` to allow calling `when()` without callback
