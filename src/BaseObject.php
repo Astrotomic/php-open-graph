@@ -2,38 +2,21 @@
 
 namespace Astrotomic\OpenGraph;
 
-use Closure;
+use Astrotomic\ConditionalProxy\HasConditionalCalls;
 
 abstract class BaseObject
 {
+    use HasConditionalCalls;
+
     /** @var BaseObject[] */
     protected array $tags = [];
 
-    /**
-     * @param $condition
-     * @param Closure|null $callback
-     *
-     * @return $this|ConditionalProxy
-     */
-    public function when($condition, ?Closure $callback = null)
-    {
-        if ($callback === null) {
-            return new ConditionalProxy($this, boolval($condition));
-        }
-
-        if ($condition) {
-            $callback($this);
-        }
-
-        return $this;
-    }
-
-    protected function setProperty(string $prefix, string $property, string $content)
+    public function setProperty(string $prefix, string $property, string $content)
     {
         $this->tags[$prefix.':'.$property] = Property::make($prefix, $property, $content);
     }
 
-    protected function addProperty(string $prefix, string $property, string $content)
+    public function addProperty(string $prefix, string $property, string $content)
     {
         $this->tags[] = Property::make($prefix, $property, $content);
     }
