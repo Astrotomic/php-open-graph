@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'composer.json'
-  pr:
+  pull_request:
     paths:
       - 'composer.json'
 
