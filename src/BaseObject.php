@@ -20,7 +20,7 @@ abstract class BaseObject
 
     protected function setProperty(string $prefix, string $property, string $content)
     {
-        $this->tags[$prefix.':'.$property] = Property::make($prefix, $property, $content);
+		$this->tags[$prefix.(empty($property)?'':':').$property] = Property::make($prefix, $property, $content);
     }
 
     protected function addProperty(string $prefix, string $property, string $content)

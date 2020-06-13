@@ -8,14 +8,14 @@ class Audio extends BaseObject
 {
     protected const PREFIX = 'og:audio';
 
-    public function __construct(string $url)
+	public function __construct(string $url,$useSubProperty=false)
     {
-        $this->setProperty(self::PREFIX, 'url', $url);
+		$this->setProperty(self::PREFIX, $useSubProperty?'url':'', $url);
     }
 
-    public static function make(string $url)
+	public static function make(string $url,$useSubProperty=false)
     {
-        return new static($url);
+		return new static($url,$useSubProperty);
     }
 
     public function secureUrl(string $url)
