@@ -2,6 +2,10 @@
 
 All notable changes to `php-open-graph` will be documented in this file
 
+## 0.3.0 - 2020-06-14
+
+- use `og:xxx` instead of `og:xxx:url` of simple string is passed (`image`, `video`, `audio`) - [#5](https://github.com/Astrotomic/php-open-graph/pull/5)
+
 ## 0.2.4 - 2020-06-11
 
 - integrate `astrotomic/php-conditional-proxy` to call methods conditionally
