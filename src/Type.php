@@ -77,11 +77,13 @@ abstract class Type extends BaseObject
      */
     public function image($image)
     {
-        $this->addStructuredProperty(
-            $image instanceof Image
-                ? $image
-                : Image::make($image)
-        );
+        if($image instanceof Image) {
+            $this->addStructuredProperty($image);
+
+            return $this;
+        }
+
+        $this->addProperty('og', 'image', $image);
 
         return $this;
     }
@@ -92,11 +94,13 @@ abstract class Type extends BaseObject
      */
     public function video($video)
     {
-        $this->addStructuredProperty(
-            $video instanceof Video
-                ? $video
-                : Video::make($video)
-        );
+        if($video instanceof Video) {
+            $this->addStructuredProperty($video);
+
+            return $this;
+        }
+
+        $this->addProperty('og', 'video', $video);
 
         return $this;
     }
@@ -107,11 +111,13 @@ abstract class Type extends BaseObject
      */
     public function audio($audio)
     {
-        $this->addStructuredProperty(
-            $audio instanceof Audio
-                ? $audio
-                : Audio::make($audio)
-        );
+        if($audio instanceof Audio) {
+            $this->addStructuredProperty($audio);
+
+            return $this;
+        }
+
+        $this->addProperty('og', 'audio', $audio);
 
         return $this;
     }
