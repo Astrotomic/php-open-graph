@@ -1,6 +1,7 @@
 <?php
 
 use Astrotomic\OpenGraph\StructuredProperties\Image;
+use Astrotomic\OpenGraph\StructuredProperties\Video;
 use Astrotomic\OpenGraph\Types\Video\Episode;
 use Astrotomic\OpenGraph\Types\Video\Movie;
 use Astrotomic\OpenGraph\Types\Video\Other;
@@ -21,6 +22,7 @@ it('can generate movie tags', function () {
                 ->mimeType('image/jpg')
                 ->alt('Movie Wallpaper')
         )
+        ->video('http://www.example.com/trailer.mp4')
 
         ->releasedAt(new DateTime('2020-06-05'))
         ->actor('http://www.example.com/actor1', 'role1')
@@ -80,7 +82,13 @@ it('can generate other tags', function () {
         ->alternateLocale('en_GB')
         ->siteName('Example')
         ->image('http://www.example.com/image1.jpg')
-        ->video('http://www.example.com/video.mp4')
+        ->video(
+            Video::make('http://www.example.com/video.mp4')
+                ->width(1920)
+                ->height(1080)
+                ->mimeType('video/mp4')
+                ->alt('Movie Wallpaper')
+        )
 
         ->releasedAt(new DateTime('2020-06-05'))
         ->duration(60 * 3.5)

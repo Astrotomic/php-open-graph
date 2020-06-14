@@ -1,5 +1,6 @@
 <?php
 
+use Astrotomic\OpenGraph\StructuredProperties\Audio;
 use Astrotomic\OpenGraph\Types\Article;
 use Astrotomic\OpenGraph\Types\Book;
 use Astrotomic\OpenGraph\Types\Profile;
@@ -68,6 +69,10 @@ it('can generate article tags', function () {
         ->alternateLocale('en_GB')
         ->siteName('Example')
         ->image('http://www.example.com/image1.jpg')
+        ->audio(
+            Audio::make('http://www.example.com/audio.mp3')
+                ->mimeType('audio/mp3')
+        )
 
         ->publishedAt(new DateTime('2020-06-05 20:00:00'))
         ->modifiedAt(new DateTime('2020-06-07 20:00:00'))
