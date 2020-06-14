@@ -77,7 +77,7 @@ abstract class Type extends BaseObject
      */
     public function image($image)
     {
-        if($image instanceof Image) {
+        if ($image instanceof Image) {
             $this->addStructuredProperty($image);
 
             return $this;
@@ -94,7 +94,7 @@ abstract class Type extends BaseObject
      */
     public function video($video)
     {
-        if($video instanceof Video) {
+        if ($video instanceof Video) {
             $this->addStructuredProperty($video);
 
             return $this;
@@ -111,7 +111,7 @@ abstract class Type extends BaseObject
      */
     public function audio($audio)
     {
-        if($audio instanceof Audio) {
+        if ($audio instanceof Audio) {
             $this->addStructuredProperty($audio);
 
             return $this;
