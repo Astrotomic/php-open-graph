@@ -31,52 +31,52 @@ echo OpenGraph::website('Example')
 ```
 
 ```html
-<meta property="og:type" content="website">
-<meta property="og:title" content="Example">
-<meta property="og:url" content="https://example.com">
-<meta property="og:image:url" content="https://example.com/image1.jpg">
-<meta property="og:image:url" content="https://example.com/image2.jpg">
-<meta property="og:image:width" content="600">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Example" />
+<meta property="og:url" content="https://example.com" />
+<meta property="og:image:url" content="https://example.com/image1.jpg" />
+<meta property="og:image:url" content="https://example.com/image2.jpg" />
+<meta property="og:image:width" content="600" />
 ```
 
 ### Types
 
 #### Global
 
-* `\Astrotomic\OpenGraph\Types\Website`
-* `\Astrotomic\OpenGraph\Types\Article`
-* `\Astrotomic\OpenGraph\Types\Profile`
-* `\Astrotomic\OpenGraph\Types\Book`
+- `\Astrotomic\OpenGraph\Types\Website`
+- `\Astrotomic\OpenGraph\Types\Article`
+- `\Astrotomic\OpenGraph\Types\Profile`
+- `\Astrotomic\OpenGraph\Types\Book`
 
 #### Music
 
-* `\Astrotomic\OpenGraph\Types\Music\Album`
-* `\Astrotomic\OpenGraph\Types\Music\Playlist`
-* `\Astrotomic\OpenGraph\Types\Music\Song`
-* `\Astrotomic\OpenGraph\Types\Music\RadioStation`
+- `\Astrotomic\OpenGraph\Types\Music\Album`
+- `\Astrotomic\OpenGraph\Types\Music\Playlist`
+- `\Astrotomic\OpenGraph\Types\Music\Song`
+- `\Astrotomic\OpenGraph\Types\Music\RadioStation`
 
 #### Video
 
-* `\Astrotomic\OpenGraph\Types\Video\Movie`
-* `\Astrotomic\OpenGraph\Types\Video\TvShow`
-* `\Astrotomic\OpenGraph\Types\Video\Episode`
-* `\Astrotomic\OpenGraph\Types\Video\Other`
+- `\Astrotomic\OpenGraph\Types\Video\Movie`
+- `\Astrotomic\OpenGraph\Types\Video\TvShow`
+- `\Astrotomic\OpenGraph\Types\Video\Episode`
+- `\Astrotomic\OpenGraph\Types\Video\Other`
 
 #### Twitter
 
-* `\Astrotomic\OpenGraph\Types\Twitter\Summary`
-* `\Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage`
-* `\Astrotomic\OpenGraph\Types\Twitter\Player`
+- `\Astrotomic\OpenGraph\Types\Twitter\Summary`
+- `\Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage`
+- `\Astrotomic\OpenGraph\Types\Twitter\Player`
 
 ### Structured Properties
 
-* `\Astrotomic\OpenGraph\StructuredProperties\Image`
-* `\Astrotomic\OpenGraph\StructuredProperties\Video`
-* `\Astrotomic\OpenGraph\StructuredProperties\Audio`
+- `\Astrotomic\OpenGraph\StructuredProperties\Image`
+- `\Astrotomic\OpenGraph\StructuredProperties\Video`
+- `\Astrotomic\OpenGraph\StructuredProperties\Audio`
 
 ## Testing
 
-``` bash
+```bash
 composer test
 ```
 
