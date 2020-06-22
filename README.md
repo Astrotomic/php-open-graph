@@ -89,7 +89,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 ### Security
 
-If you discover any security related issues, please check [SECURITY](https://github.com/Astrotomic/.github/blob/master/SECURITY.md) for steps to report it.## Credits
+If you discover any security related issues, please check [SECURITY](https://github.com/Astrotomic/.github/blob/master/SECURITY.md) for steps to report it.
+
+## Credits
 
 - [Tom Witkowski](https://github.com/Gummibeer)
 - [Alex Vanderbist](https://github.com/AlexVanderbist)
