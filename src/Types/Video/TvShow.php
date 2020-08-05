@@ -9,7 +9,10 @@ class TvShow extends Type
 {
     protected const PREFIX = 'video';
 
-    protected string $type = 'video.tv_show';
+    /**
+     * @var string
+     */
+    protected $type = 'video.tv_show';
 
     public function actor(string $url, ?string $role = null)
     {

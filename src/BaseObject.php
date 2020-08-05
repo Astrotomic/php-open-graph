@@ -9,7 +9,7 @@ abstract class BaseObject
     use HasConditionalCalls;
 
     /** @var BaseObject[] */
-    protected array $tags = [];
+    protected $tags = [];
 
     public function setProperty(string $prefix, string $property, string $content)
     {

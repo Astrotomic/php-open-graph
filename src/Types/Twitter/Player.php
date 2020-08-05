@@ -6,7 +6,10 @@ use Astrotomic\OpenGraph\TwitterType;
 
 class Player extends TwitterType
 {
-    protected string $type = 'player';
+    /**
+     * @var string
+     */
+    protected $type = 'player';
 
     public function player(string $url, int $width, int $height)
     {
