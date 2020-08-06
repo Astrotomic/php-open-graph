@@ -9,7 +9,8 @@ class Article extends Type
 {
     protected const PREFIX = 'article';
 
-    protected string $type = 'article';
+    /** @var string */
+    protected $type = 'article';
 
     public function author(string $url)
     {

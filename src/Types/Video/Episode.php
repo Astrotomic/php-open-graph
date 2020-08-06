@@ -9,7 +9,8 @@ class Episode extends Type
 {
     protected const PREFIX = 'video';
 
-    protected string $type = 'video.episode';
+    /** @var string */
+    protected $type = 'video.episode';
 
     public function series(string $url)
     {

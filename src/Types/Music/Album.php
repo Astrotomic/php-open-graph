@@ -9,7 +9,8 @@ class Album extends Type
 {
     protected const PREFIX = 'music';
 
-    protected string $type = 'music.album';
+    /** @var string */
+    protected $type = 'music.album';
 
     public function musician(string $url)
     {

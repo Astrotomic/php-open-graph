@@ -8,7 +8,8 @@ class Playlist extends Type
 {
     protected const PREFIX = 'music';
 
-    protected string $type = 'music.playlist';
+    /** @var string */
+    protected $type = 'music.playlist';
 
     public function creator(string $url)
     {

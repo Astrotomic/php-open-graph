@@ -8,7 +8,8 @@ class Profile extends Type
 {
     protected const PREFIX = 'profile';
 
-    protected string $type = 'profile';
+    /** @var string */
+    protected $type = 'profile';
 
     public function firstName(string $firstName)
     {
