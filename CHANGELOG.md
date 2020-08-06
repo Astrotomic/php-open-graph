@@ -4,7 +4,7 @@ All notable changes to `php-open-graph` will be documented in this file
 
 ## 0.4.0 - 2020-08-06
 
-- Backport to PHP 7.1 [#9](https://github.com/Astrotomic/php-open-graph/pull/9)
+-   Backport to PHP 7.1 [#9](https://github.com/Astrotomic/php-open-graph/pull/9)
 
 ## 0.3.0 - 2020-06-14
 
