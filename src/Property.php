@@ -4,9 +4,14 @@ namespace Astrotomic\OpenGraph;
 
 class Property
 {
-    protected string $prefix = 'og';
-    protected string $property;
-    protected string $content;
+    /** @var string */
+    protected $prefix = 'og';
+
+    /** @var string */
+    protected $property;
+
+    /** @var string */
+    protected $content;
 
     public function __construct(string $prefix, string $property, string $content)
     {

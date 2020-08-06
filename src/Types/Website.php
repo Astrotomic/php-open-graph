@@ -6,5 +6,6 @@ use Astrotomic\OpenGraph\Type;
 
 class Website extends Type
 {
-    protected string $type = 'website';
+    /** @var string */
+    protected $type = 'website';
 }
