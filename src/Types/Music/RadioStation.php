@@ -8,7 +8,10 @@ class RadioStation extends Type
 {
     protected const PREFIX = 'music';
 
-    protected string $type = 'music.radio_station';
+    /**
+     * @var string
+     */
+    protected $type = 'music.radio_station';
 
     public function creator(string $url)
     {
