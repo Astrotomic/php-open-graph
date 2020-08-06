@@ -6,9 +6,7 @@ use Astrotomic\OpenGraph\TwitterType;
 
 class SummaryLargeImage extends TwitterType
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $type = 'summary_large_image';
 
     public function creator(string $creator)

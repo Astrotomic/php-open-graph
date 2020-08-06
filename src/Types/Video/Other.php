@@ -9,9 +9,7 @@ class Other extends Type
 {
     protected const PREFIX = 'video';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $type = 'video.other';
 
     public function actor(string $url, ?string $role = null)

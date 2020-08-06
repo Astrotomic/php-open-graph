@@ -8,9 +8,7 @@ use Astrotomic\OpenGraph\StructuredProperties\Video;
 
 abstract class Type extends BaseObject
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $type;
 
     public function __construct(?string $title = null)

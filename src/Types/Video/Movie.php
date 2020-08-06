@@ -9,9 +9,7 @@ class Movie extends Type
 {
     protected const PREFIX = 'video';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $type = 'video.movie';
 
     public function actor(string $url, ?string $role = null)

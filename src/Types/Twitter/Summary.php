@@ -6,8 +6,6 @@ use Astrotomic\OpenGraph\TwitterType;
 
 class Summary extends TwitterType
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $type = 'summary';
 }

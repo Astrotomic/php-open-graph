@@ -8,9 +8,7 @@ class Song extends Type
 {
     protected const PREFIX = 'music';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $type = 'music.song';
 
     public function duration(int $seconds)

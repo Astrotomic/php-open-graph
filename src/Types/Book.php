@@ -9,9 +9,7 @@ class Book extends Type
 {
     protected const PREFIX = 'book';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $type = 'book';
 
     public function author(string $url)
