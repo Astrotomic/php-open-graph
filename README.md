@@ -44,36 +44,36 @@ echo OpenGraph::website('Example')
 
 #### Global
 
-- `\Astrotomic\OpenGraph\Types\Website`
-- `\Astrotomic\OpenGraph\Types\Article`
-- `\Astrotomic\OpenGraph\Types\Profile`
-- `\Astrotomic\OpenGraph\Types\Book`
+-   `\Astrotomic\OpenGraph\Types\Website`
+-   `\Astrotomic\OpenGraph\Types\Article`
+-   `\Astrotomic\OpenGraph\Types\Profile`
+-   `\Astrotomic\OpenGraph\Types\Book`
 
 #### Music
 
-- `\Astrotomic\OpenGraph\Types\Music\Album`
-- `\Astrotomic\OpenGraph\Types\Music\Playlist`
-- `\Astrotomic\OpenGraph\Types\Music\Song`
-- `\Astrotomic\OpenGraph\Types\Music\RadioStation`
+-   `\Astrotomic\OpenGraph\Types\Music\Album`
+-   `\Astrotomic\OpenGraph\Types\Music\Playlist`
+-   `\Astrotomic\OpenGraph\Types\Music\Song`
+-   `\Astrotomic\OpenGraph\Types\Music\RadioStation`
 
 #### Video
 
-- `\Astrotomic\OpenGraph\Types\Video\Movie`
-- `\Astrotomic\OpenGraph\Types\Video\TvShow`
-- `\Astrotomic\OpenGraph\Types\Video\Episode`
-- `\Astrotomic\OpenGraph\Types\Video\Other`
+-   `\Astrotomic\OpenGraph\Types\Video\Movie`
+-   `\Astrotomic\OpenGraph\Types\Video\TvShow`
+-   `\Astrotomic\OpenGraph\Types\Video\Episode`
+-   `\Astrotomic\OpenGraph\Types\Video\Other`
 
 #### Twitter
 
-- `\Astrotomic\OpenGraph\Types\Twitter\Summary`
-- `\Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage`
-- `\Astrotomic\OpenGraph\Types\Twitter\Player`
+-   `\Astrotomic\OpenGraph\Types\Twitter\Summary`
+-   `\Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage`
+-   `\Astrotomic\OpenGraph\Types\Twitter\Player`
 
 ### Structured Properties
 
-- `\Astrotomic\OpenGraph\StructuredProperties\Image`
-- `\Astrotomic\OpenGraph\StructuredProperties\Video`
-- `\Astrotomic\OpenGraph\StructuredProperties\Audio`
+-   `\Astrotomic\OpenGraph\StructuredProperties\Image`
+-   `\Astrotomic\OpenGraph\StructuredProperties\Video`
+-   `\Astrotomic\OpenGraph\StructuredProperties\Audio`
 
 ## Testing
 
@@ -95,9 +95,9 @@ If you discover any security related issues, please check [SECURITY](https://git
 
 ## Credits
 
-- [Tom Witkowski](https://github.com/Gummibeer)
-- [Alex Vanderbist](https://github.com/AlexVanderbist)
-- [All Contributors](../../contributors)
+-   [Tom Witkowski](https://github.com/Gummibeer)
+-   [Alex Vanderbist](https://github.com/AlexVanderbist)
+-   [All Contributors](../../contributors)
 
 ## License
 
