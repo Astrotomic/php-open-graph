@@ -35,8 +35,8 @@ echo OpenGraph::website('Example')
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Example" />
 <meta property="og:url" content="https://example.com" />
-<meta property="og:image:url" content="https://example.com/image1.jpg" />
-<meta property="og:image:url" content="https://example.com/image2.jpg" />
+<meta property="og:image" content="https://example.com/image1.jpg" />
+<meta property="og:image" content="https://example.com/image2.jpg" />
 <meta property="og:image:width" content="600" />
 ```
 

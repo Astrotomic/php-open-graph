@@ -11,9 +11,10 @@ abstract class BaseObject
     /** @var BaseObject[] */
     protected $tags = [];
 
-    public function setProperty(string $prefix, string $property, string $content)
+    public function setProperty(string $prefix, ?string $property, string $content)
     {
-        $this->tags[$prefix.':'.$property] = Property::make($prefix, $property, $content);
+        $key = $property ? $prefix.':'.$property : $prefix;
+        $this->tags[$key] = Property::make($prefix, $property, $content);
     }
 
     public function addProperty(string $prefix, string $property, string $content)

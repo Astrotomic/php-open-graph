@@ -10,7 +10,7 @@ class Image extends BaseObject
 
     public function __construct(string $url)
     {
-        $this->setProperty(self::PREFIX, 'url', $url);
+        $this->setProperty(self::PREFIX, null, $url);
     }
 
     public static function make(string $url)
