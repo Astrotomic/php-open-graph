@@ -1,6 +1,7 @@
 <?php
 
 use Astrotomic\OpenGraph\StructuredProperties\Audio;
+use Astrotomic\OpenGraph\StructuredProperties\Image;
 use Astrotomic\OpenGraph\Types\Article;
 use Astrotomic\OpenGraph\Types\Book;
 use Astrotomic\OpenGraph\Types\Profile;
@@ -35,13 +36,41 @@ it('can generate website tags with stringable image', function () {
     assertMatchesHtmlSnapshot((string) $og);
 })->group('global', 'website');
 
+it('can generate website tags with structured image', function () {
+    $og = Website::make('Title | Example')
+        ->url('http://www.example.com')
+        ->description('Description')
+        ->locale('en_US')
+        ->alternateLocale('en_GB')
+        ->siteName('Example')
+        ->image(Image::make('http://www.example.com/image1.jpg')->mimeType('image/jpeg'));
+
+    assertMatchesHtmlSnapshot((string) $og);
+})->group('global', 'website');
+
+it('can generate website tags with structured image without url suffix', function () {
+    $og = Website::make('Title | Example')
+        ->url('http://www.example.com')
+        ->description('Description')
+        ->locale('en_US')
+        ->alternateLocale('en_GB')
+        ->siteName('Example')
+        ->image(Image::make('http://www.example.com/image1.jpg', false)->mimeType('image/jpeg'));
+
+    assertMatchesHtmlSnapshot((string) $og);
+})->group('global', 'website');
+
 it('can generate website tags with conditional callbacks', function () {
     $og = Website::make('Title | Example')
         ->url('http://www.example.com')
         ->description('Description')
         ->locale('en_US')
-        ->when(false, fn (Website $og) => $og->alternateLocale('de_DE'))
-        ->when(true, fn (Website $og) => $og->alternateLocale('en_GB'))
+        ->when(false, function (Website $og) {
+            $og->alternateLocale('de_DE');
+        })
+        ->when(true, function (Website $og) {
+            $og->alternateLocale('en_GB');
+        })
         ->siteName('Example')
         ->image('http://www.example.com/image1.jpg');
 
