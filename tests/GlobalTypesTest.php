@@ -6,6 +6,7 @@ use Astrotomic\OpenGraph\Types\Article;
 use Astrotomic\OpenGraph\Types\Book;
 use Astrotomic\OpenGraph\Types\Profile;
 use Astrotomic\OpenGraph\Types\Website;
+use function Spatie\Snapshots\{assertMatchesHtmlSnapshot};
 
 it('can generate website tags', function () {
     $og = Website::make('Title | Example')
