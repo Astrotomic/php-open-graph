@@ -2,21 +2,9 @@
 
 namespace Astrotomic\OpenGraph\StructuredProperties;
 
-use Astrotomic\OpenGraph\BaseObject;
-
-class Audio extends BaseObject
+class Audio extends StructuredProperty
 {
     protected const PREFIX = 'og:audio';
-
-    public function __construct(string $url)
-    {
-        $this->setProperty(self::PREFIX, 'url', $url);
-    }
-
-    public static function make(string $url)
-    {
-        return new static($url);
-    }
 
     public function secureUrl(string $url)
     {

@@ -4,6 +4,7 @@ use Astrotomic\OpenGraph\Types\Music\Album;
 use Astrotomic\OpenGraph\Types\Music\Playlist;
 use Astrotomic\OpenGraph\Types\Music\RadioStation;
 use Astrotomic\OpenGraph\Types\Music\Song;
+use function Spatie\Snapshots\{assertMatchesHtmlSnapshot};
 
 it('can generate song tags', function () {
     $og = Song::make('Title | Example')

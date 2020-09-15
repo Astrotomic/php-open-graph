@@ -3,6 +3,7 @@
 use Astrotomic\OpenGraph\Types\Twitter\Player;
 use Astrotomic\OpenGraph\Types\Twitter\Summary;
 use Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage;
+use function Spatie\Snapshots\{assertMatchesHtmlSnapshot};
 
 it('can generate summary tags', function () {
     $og = Summary::make('Title | Example')

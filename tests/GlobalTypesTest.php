@@ -1,10 +1,12 @@
 <?php
 
 use Astrotomic\OpenGraph\StructuredProperties\Audio;
+use Astrotomic\OpenGraph\StructuredProperties\Image;
 use Astrotomic\OpenGraph\Types\Article;
 use Astrotomic\OpenGraph\Types\Book;
 use Astrotomic\OpenGraph\Types\Profile;
 use Astrotomic\OpenGraph\Types\Website;
+use function Spatie\Snapshots\{assertMatchesHtmlSnapshot};
 
 it('can generate website tags', function () {
     $og = Website::make('Title | Example')
@@ -31,6 +33,30 @@ it('can generate website tags with stringable image', function () {
                 return 'http://www.example.com/image1.jpg';
             }
         });
+
+    assertMatchesHtmlSnapshot((string) $og);
+})->group('global', 'website');
+
+it('can generate website tags with structured image', function () {
+    $og = Website::make('Title | Example')
+        ->url('http://www.example.com')
+        ->description('Description')
+        ->locale('en_US')
+        ->alternateLocale('en_GB')
+        ->siteName('Example')
+        ->image(Image::make('http://www.example.com/image1.jpg')->mimeType('image/jpeg'));
+
+    assertMatchesHtmlSnapshot((string) $og);
+})->group('global', 'website');
+
+it('can generate website tags with structured image without url suffix', function () {
+    $og = Website::make('Title | Example')
+        ->url('http://www.example.com')
+        ->description('Description')
+        ->locale('en_US')
+        ->alternateLocale('en_GB')
+        ->siteName('Example')
+        ->image(Image::make('http://www.example.com/image1.jpg', false)->mimeType('image/jpeg'));
 
     assertMatchesHtmlSnapshot((string) $og);
 })->group('global', 'website');
