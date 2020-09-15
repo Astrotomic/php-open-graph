@@ -19,6 +19,7 @@
         "astrotomic/php-conditional-proxy": "^0.2.0"
     },
     "require-dev": {
+        "php": "^7.4",
         "pestphp/pest": "^0.3.0",
         "spatie/pest-plugin-snapshots": "^0.3.0"
     },
