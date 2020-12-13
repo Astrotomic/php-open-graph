@@ -2,6 +2,10 @@
 
 All notable changes to `php-open-graph` will be documented in this file
 
+## 0.5.1 - 2020-12-14
+
+- Fix properties with double quotes in it
+
 ## 0.5.0 - 2020-09-15
 
 -   Allow to suppress URL suffix for structured properties - [#11](https://github.com/Astrotomic/php-open-graph/pull/11)
