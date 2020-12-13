@@ -20,6 +20,18 @@ it('can generate website tags', function () {
     assertMatchesHtmlSnapshot((string) $og);
 })->group('global', 'website');
 
+it('can generate website tags with quotes', function () {
+    $og = Website::make('Title "\'&&amp; | Example')
+        ->url('http://www.example.com')
+        ->description('Description')
+        ->locale('en_US')
+        ->alternateLocale('en_GB')
+        ->siteName('Example')
+        ->image('http://www.example.com/image1.jpg');
+
+    assertMatchesHtmlSnapshot((string) $og);
+})->group('global', 'website');
+
 it('can generate website tags with stringable image', function () {
     $og = Website::make('Title | Example')
         ->url('http://www.example.com')

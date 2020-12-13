@@ -27,6 +27,8 @@ class Property
 
     public function __toString(): string
     {
-        return "<meta property=\"{$this->prefix}:{$this->property}\" content=\"{$this->content}\">";
+        $content = str_replace('"', '&quot;', $this->content);
+
+        return "<meta property=\"{$this->prefix}:{$this->property}\" content=\"{$content}\">";
     }
 }
