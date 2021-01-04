@@ -2,6 +2,10 @@
 
 All notable changes to `php-open-graph` will be documented in this file
 
+## 0.5.2 - 2021-01-04
+
+- Add PHP 8.0 support
+
 ## 0.5.1 - 2020-12-14
 
 -   Fix properties with double quotes in it
