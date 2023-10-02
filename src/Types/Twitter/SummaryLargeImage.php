@@ -11,7 +11,7 @@ class SummaryLargeImage extends TwitterType
 
     public function creator(string $creator)
     {
-        $this->setProperty(self::PREFIX, 'creator', $creator);
+        $this->setName(self::PREFIX, 'creator', $creator);
 
         return $this;
     }

@@ -2,13 +2,13 @@
 
 namespace Astrotomic\OpenGraph;
 
-abstract class TwitterType extends BaseObject
+abstract class TwitterType extends TwitterBaseObject
 {
     protected const PREFIX = 'twitter';
 
     public function __construct(?string $title = null)
     {
-        $this->setProperty(self::PREFIX, 'card', $this->type);
+        $this->setName(self::PREFIX, 'card', $this->type);
         $this->when($title)->title($title);
     }
 
@@ -19,29 +19,29 @@ abstract class TwitterType extends BaseObject
 
     public function title(string $title)
     {
-        $this->setProperty(self::PREFIX, 'title', $title);
+        $this->setName(self::PREFIX, 'title', $title);
 
         return $this;
     }
 
     public function site(string $site)
     {
-        $this->setProperty(self::PREFIX, 'site', $site);
+        $this->setName(self::PREFIX, 'site', $site);
 
         return $this;
     }
 
     public function description(string $description)
     {
-        $this->setProperty(self::PREFIX, 'description', $description);
+        $this->setName(self::PREFIX, 'description', $description);
 
         return $this;
     }
 
     public function image(string $image, ?string $alt = null)
     {
-        $this->setProperty(self::PREFIX, 'image', $image);
-        $this->when($alt)->setProperty(self::PREFIX, 'image:alt', $alt);
+        $this->setName(self::PREFIX, 'image', $image);
+        $this->when($alt)->setName(self::PREFIX, 'image:alt', $alt);
 
         return $this;
     }

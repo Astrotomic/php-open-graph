@@ -11,9 +11,9 @@ class Player extends TwitterType
 
     public function player(string $url, int $width, int $height)
     {
-        $this->setProperty(self::PREFIX, 'player', $url);
-        $this->setProperty(self::PREFIX, 'player:width', $width);
-        $this->setProperty(self::PREFIX, 'player:height', $height);
+        $this->setName(self::PREFIX, 'player', $url);
+        $this->setName(self::PREFIX, 'player:width', $width);
+        $this->setName(self::PREFIX, 'player:height', $height);
 
         return $this;
     }
