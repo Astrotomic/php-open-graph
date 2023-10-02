@@ -8,7 +8,7 @@ abstract class TwitterBaseObject
 {
     use HasConditionalCalls;
 
-    /** @var BaseObject[] */
+    /** @var TwitterBaseObject[] */
     protected $tags = [];
 
     public function setName(string $prefix, string $name, string $content)
