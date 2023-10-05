@@ -1,9 +1,10 @@
 <?php
 
+use Astrotomic\OpenGraph\Types\Twitter\App;
 use Astrotomic\OpenGraph\Types\Twitter\Player;
 use Astrotomic\OpenGraph\Types\Twitter\Summary;
 use Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage;
-use Astrotomic\OpenGraph\Types\Twitter\App;
+
 use function Spatie\Snapshots\{assertMatchesHtmlSnapshot};
 
 it('can generate summary tags', function () {
@@ -40,37 +41,37 @@ it('can generate iPhone app tags ', function () {
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPhoneApp("AppName", "A1B2C3D4E5");
+        ->iPhoneApp('AppName', 'A1B2C3D4E5');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Correct URL
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPhoneApp("AppName", "A1B2C3D4E5", "https://app.domainname.com");
+        ->iPhoneApp('AppName', 'A1B2C3D4E5', 'https://app.domainname.com');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Wrong URL
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPhoneApp("AppName", "A1B2C3D4E5", "https:/app.domainname.com");
+        ->iPhoneApp('AppName', 'A1B2C3D4E5', 'https:/app.domainname.com');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Correct Country
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPhoneApp("AppName", "A1B2C3D4E5", "https://app.domainname.com")
-        ->country("HR");
+        ->iPhoneApp('AppName', 'A1B2C3D4E5', 'https://app.domainname.com')
+        ->country('HR');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Wrong Country
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPhoneApp("AppName", "A1B2C3D4E5", "https://app.domainname.com")
-        ->country("CRO");
+        ->iPhoneApp('AppName', 'A1B2C3D4E5', 'https://app.domainname.com')
+        ->country('CRO');
     assertMatchesHtmlSnapshot((string)$og);
 })->group('twitter', 'app');
 
@@ -79,37 +80,37 @@ it('can generate iPad app tags ', function () {
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPadApp("AppName", "A1B2C3D4E5");
+        ->iPadApp('AppName', 'A1B2C3D4E5');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Correct URL
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPadApp("AppName", "A1B2C3D4E5", "https://app.domainname.com");
+        ->iPadApp('AppName', 'A1B2C3D4E5', 'https://app.domainname.com');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Wrong URL
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPadApp("AppName", "A1B2C3D4E5", "https:/app.domainname.com");
+        ->iPadApp('AppName', 'A1B2C3D4E5', 'https:/app.domainname.com');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Correct Country
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPadApp("AppName", "A1B2C3D4E5", "https://app.domainname.com")
-        ->country("HR");
+        ->iPadApp('AppName', 'A1B2C3D4E5', 'https://app.domainname.com')
+        ->country('HR');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Wrong Country
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPadApp("AppName", "A1B2C3D4E5", "https://app.domainname.com")
-        ->country("CRO");
+        ->iPadApp('AppName', 'A1B2C3D4E5', 'https://app.domainname.com')
+        ->country('CRO');
     assertMatchesHtmlSnapshot((string)$og);
 })->group('twitter', 'app');
 
@@ -118,37 +119,37 @@ it('can generate Google Play app tags ', function () {
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->googlePlayApp("AppName", "id123456789");
+        ->googlePlayApp('AppName', 'id123456789');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Correct URL
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->googlePlayApp("AppName", "id123456789", "https://app.domainname.com");
+        ->googlePlayApp('AppName', 'id123456789', 'https://app.domainname.com');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Wrong URL
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->googlePlayApp("AppName", "id123456789", "https:/app.domainname.com");
+        ->googlePlayApp('AppName', 'id123456789', 'https:/app.domainname.com');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Correct Country
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->googlePlayApp("AppName", "id123456789", "https://app.domainname.com")
-        ->country("HR");
+        ->googlePlayApp('AppName', 'id123456789', 'https://app.domainname.com')
+        ->country('HR');
     assertMatchesHtmlSnapshot((string)$og);
 
     //With Wrong Country
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->googlePlayApp("AppName", "id123456789", "https://app.domainname.com")
-        ->country("CRO");
+        ->googlePlayApp('AppName', 'id123456789', 'https://app.domainname.com')
+        ->country('CRO');
     assertMatchesHtmlSnapshot((string)$og);
 })->group('twitter', 'app');
 
@@ -156,9 +157,9 @@ it('can generate combined app tags ', function () {
     $og = App::make('Title | Example')
         ->description('Description')
         ->site('@astrotomic_oss')
-        ->iPadApp("AppName", "A1B2C3D4E5", "https://app.domainname.com")
-        ->iPhoneApp("AppName", "A1B2C3D4E5", "https://app.domainname.com")
-        ->googlePlayApp("AppName", "id123456789", "https://app.domainname.com")
-        ->country("HR");
+        ->iPadApp('AppName', 'A1B2C3D4E5', 'https://app.domainname.com')
+        ->iPhoneApp('AppName', 'A1B2C3D4E5', 'https://app.domainname.com')
+        ->googlePlayApp('AppName', 'id123456789', 'https://app.domainname.com')
+        ->country('HR');
     assertMatchesHtmlSnapshot((string)$og);
 })->group('twitter', 'app');
