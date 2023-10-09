@@ -45,4 +45,14 @@ abstract class TwitterType extends BaseObject
 
         return $this;
     }
+
+    public function setProperty(string $prefix, string $property, string $content)
+    {
+        $this->tags[$prefix.':'.$property] = TwitterProperty::make($prefix, $property, $content);
+    }
+
+    public function addProperty(string $prefix, string $property, string $content)
+    {
+        $this->tags[] = TwitterProperty::make($prefix, $property, $content);
+    }
 }
