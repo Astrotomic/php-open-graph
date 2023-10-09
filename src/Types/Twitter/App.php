@@ -14,9 +14,7 @@ class App extends TwitterType
         $this->setProperty(self::PREFIX, 'app:name:iphone', $name);
         $this->setProperty(self::PREFIX, 'app:id:iphone', $iPhoneAppId);
         if (! empty($iPhoneAppUrl)) {
-            if (str_contains($iPhoneAppUrl, '://')) {
-                $this->setProperty(self::PREFIX, 'app:url:iphone', $iPhoneAppUrl);
-            }
+            $this->setProperty(self::PREFIX, 'app:url:iphone', $iPhoneAppUrl);
         }
 
         return $this;
@@ -27,9 +25,7 @@ class App extends TwitterType
         $this->setProperty(self::PREFIX, 'app:name:ipad', $name);
         $this->setProperty(self::PREFIX, 'app:id:ipad', $iPadAppId);
         if (! empty($iPadAppUrl)) {
-            if (str_contains($iPadAppUrl, '://')) {
-                $this->setProperty(self::PREFIX, 'app:url:ipad', $iPadAppUrl);
-            }
+            $this->setProperty(self::PREFIX, 'app:url:ipad', $iPadAppUrl);
         }
 
         return $this;
@@ -40,9 +36,7 @@ class App extends TwitterType
         $this->setProperty(self::PREFIX, 'app:name:googleplay', $name);
         $this->setProperty(self::PREFIX, 'app:id:googleplay', $googlePlayAppId);
         if (! empty($googlePlayAppUrl)) {
-            if (str_contains($googlePlayAppUrl, '://')) {
-                $this->setProperty(self::PREFIX, 'app:url:googleplay', $googlePlayAppUrl);
-            }
+            $this->setProperty(self::PREFIX, 'app:url:googleplay', $googlePlayAppUrl);
         }
 
         return $this;
