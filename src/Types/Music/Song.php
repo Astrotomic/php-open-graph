@@ -25,7 +25,7 @@ class Song extends Type
         return $this;
     }
 
-    public function album(string $url, ?int $disc = null, ?int $track = null)
+    public function album(string $url, int $disc = null, int $track = null)
     {
         $this->addProperty(self::PREFIX, 'album', $url);
         $this->when($disc > 0)->addProperty(self::PREFIX, 'album:disc', $disc);

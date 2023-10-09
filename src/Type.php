@@ -11,13 +11,13 @@ abstract class Type extends BaseObject
     /** @var string */
     protected $type;
 
-    public function __construct(?string $title = null)
+    public function __construct(string $title = null)
     {
         $this->setProperty('og', 'type', $this->type);
         $this->when($title)->title($title);
     }
 
-    public static function make(?string $title = null)
+    public static function make(string $title = null)
     {
         return new static($title);
     }
@@ -72,8 +72,7 @@ abstract class Type extends BaseObject
     }
 
     /**
-     * @param Image|string $image
-     *
+     * @param  Image|string  $image
      * @return $this
      */
     public function image($image)
@@ -90,7 +89,7 @@ abstract class Type extends BaseObject
     }
 
     /**
-     * @param Video|string $video
+     * @param  Video|string  $video
      * @return $this
      */
     public function video($video)
@@ -107,7 +106,7 @@ abstract class Type extends BaseObject
     }
 
     /**
-     * @param Audio|string $audio
+     * @param  Audio|string  $audio
      * @return $this
      */
     public function audio($audio)

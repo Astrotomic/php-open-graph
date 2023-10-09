@@ -5,8 +5,8 @@
 [![Offset Earth](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-green?style=for-the-badge)](https://plant.treeware.earth/Astrotomic/php-open-graph)
 [![Larabelles](https://img.shields.io/badge/Larabelles-%F0%9F%A6%84-lightpink?style=for-the-badge)](https://www.larabelles.com/)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Astrotomic/php-open-graph/run-tests?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/php-open-graph/actions?query=workflow%3Arun-tests)
-[![StyleCI](https://styleci.io/repos/82821437/shield)](https://styleci.io/repos/82821437)
+[![pest](https://img.shields.io/github/workflow/status/Astrotomic/php-open-graph/pest?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/php-open-graph/actions?query=workflow%3Apest)
+[![pint](https://img.shields.io/github/workflow/status/Astrotomic/php-open-graph/pint?style=flat-square&logoColor=white&logo=github&label=CS)](https://github.com/Astrotomic/php-open-graph/actions?query=workflow%3Apint)
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/php-open-graph.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/astrotomic/php-open-graph)
 
 This package provides a fluent PHP OOP builder for [Open Graph protocol](https://ogp.me) and [Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards).
@@ -44,36 +44,37 @@ echo OpenGraph::website('Example')
 
 #### Global
 
--   `\Astrotomic\OpenGraph\Types\Website`
 -   `\Astrotomic\OpenGraph\Types\Article`
--   `\Astrotomic\OpenGraph\Types\Profile`
 -   `\Astrotomic\OpenGraph\Types\Book`
+-   `\Astrotomic\OpenGraph\Types\Profile`
+-   `\Astrotomic\OpenGraph\Types\Website`
 
 #### Music
 
 -   `\Astrotomic\OpenGraph\Types\Music\Album`
 -   `\Astrotomic\OpenGraph\Types\Music\Playlist`
--   `\Astrotomic\OpenGraph\Types\Music\Song`
 -   `\Astrotomic\OpenGraph\Types\Music\RadioStation`
+-   `\Astrotomic\OpenGraph\Types\Music\Song`
 
 #### Video
 
--   `\Astrotomic\OpenGraph\Types\Video\Movie`
--   `\Astrotomic\OpenGraph\Types\Video\TvShow`
 -   `\Astrotomic\OpenGraph\Types\Video\Episode`
+-   `\Astrotomic\OpenGraph\Types\Video\Movie`
 -   `\Astrotomic\OpenGraph\Types\Video\Other`
+-   `\Astrotomic\OpenGraph\Types\Video\TvShow`
 
 #### Twitter
 
--   `\Astrotomic\OpenGraph\Types\Twitter\Summary`
--   `\Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage`
+-   `\Astrotomic\OpenGraph\Types\Twitter\App`
 -   `\Astrotomic\OpenGraph\Types\Twitter\Player`
+-   `\Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage`
+-   `\Astrotomic\OpenGraph\Types\Twitter\Summary`
 
 ### Structured Properties
 
+-   `\Astrotomic\OpenGraph\StructuredProperties\Audio`
 -   `\Astrotomic\OpenGraph\StructuredProperties\Image`
 -   `\Astrotomic\OpenGraph\StructuredProperties\Video`
--   `\Astrotomic\OpenGraph\StructuredProperties\Audio`
 
 ## Testing
 

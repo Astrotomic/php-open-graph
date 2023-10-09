@@ -1,11 +1,10 @@
 {
     "name": "astrotomic/php-open-graph",
     "description": "Easily generate Open Graph tags",
+    "license": "MIT",
     "keywords": [
         "open-graph"
     ],
-    "homepage": "https://github.com/Astrotomic/php-open-graph",
-    "license": "MIT",
     "authors": [
         {
             "name": "Tom Witkowski",
@@ -14,31 +13,31 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://github.com/Astrotomic/php-open-graph",
     "require": {
-        "php": "^7.1 || ^8.0",
+        "php": "^8.1",
         "astrotomic/php-conditional-proxy": "^0.2.1"
     },
     "require-dev": {
-        "pestphp/pest": "^0.3.0",
-        "spatie/pest-plugin-snapshots": "^0.3.0"
+        "laravel/pint": "^1.0",
+        "pestphp/pest": "^2.0",
+        "spatie/pest-plugin-snapshots": "^2.0"
     },
-    "suggest": {
-        "php": "^7.4"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
-    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Astrotomic\\OpenGraph\\": "src"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    },
     "scripts": {
-        "test": "vendor/bin/pest"
+        "fix": "@php vendor/bin/pint",
+        "test": "@php vendor/bin/pest"
     }
 }

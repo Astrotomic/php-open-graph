@@ -1,0 +1,23 @@
+name: pest
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: P${{ matrix.php }} - ${{ matrix.dependency-version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        php: ['8.1', '8.2']
+        dependency-version: [prefer-lowest, prefer-stable]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, json
+      - run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
+      - run: vendor/bin/pest

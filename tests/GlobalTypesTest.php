@@ -6,6 +6,7 @@ use Astrotomic\OpenGraph\Types\Article;
 use Astrotomic\OpenGraph\Types\Book;
 use Astrotomic\OpenGraph\Types\Profile;
 use Astrotomic\OpenGraph\Types\Website;
+
 use function Spatie\Snapshots\{assertMatchesHtmlSnapshot};
 
 it('can generate website tags', function () {
@@ -39,7 +40,8 @@ it('can generate website tags with stringable image', function () {
         ->locale('en_US')
         ->alternateLocale('en_GB')
         ->siteName('Example')
-        ->image(new class() {
+        ->image(new class()
+        {
             public function __toString()
             {
                 return 'http://www.example.com/image1.jpg';

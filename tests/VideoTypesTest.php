@@ -6,6 +6,7 @@ use Astrotomic\OpenGraph\Types\Video\Episode;
 use Astrotomic\OpenGraph\Types\Video\Movie;
 use Astrotomic\OpenGraph\Types\Video\Other;
 use Astrotomic\OpenGraph\Types\Video\TvShow;
+
 use function Spatie\Snapshots\{assertMatchesHtmlSnapshot};
 
 it('can generate movie tags', function () {
