@@ -19,9 +19,9 @@
         "astrotomic/php-conditional-proxy": "^0.2.1"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
-        "pestphp/pest": "^2.0",
-        "spatie/pest-plugin-snapshots": "^2.0"
+        "laravel/pint": "^1.13",
+        "pestphp/pest": "^2.21",
+        "spatie/pest-plugin-snapshots": "^2.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
