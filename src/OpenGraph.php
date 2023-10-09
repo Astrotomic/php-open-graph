@@ -17,62 +17,62 @@ use Astrotomic\OpenGraph\Types\Website;
 
 class OpenGraph
 {
-    public static function website(?string $title = null): Website
+    public static function website(string $title = null): Website
     {
         return Website::make($title);
     }
 
-    public static function article(?string $title = null): Article
+    public static function article(string $title = null): Article
     {
         return Article::make($title);
     }
 
-    public static function book(?string $title = null): Book
+    public static function book(string $title = null): Book
     {
         return Book::make($title);
     }
 
-    public static function profile(?string $title = null): Profile
+    public static function profile(string $title = null): Profile
     {
         return Profile::make($title);
     }
 
-    public static function movie(?string $title = null): Movie
+    public static function movie(string $title = null): Movie
     {
         return Movie::make($title);
     }
 
-    public static function tvShow(?string $title = null): TvShow
+    public static function tvShow(string $title = null): TvShow
     {
         return TvShow::make($title);
     }
 
-    public static function episode(?string $title = null): Episode
+    public static function episode(string $title = null): Episode
     {
         return Episode::make($title);
     }
 
-    public static function other(?string $title = null): Other
+    public static function other(string $title = null): Other
     {
         return Other::make($title);
     }
 
-    public static function album(?string $title = null): Album
+    public static function album(string $title = null): Album
     {
         return Album::make($title);
     }
 
-    public static function song(?string $title = null): Song
+    public static function song(string $title = null): Song
     {
         return Song::make($title);
     }
 
-    public static function playlist(?string $title = null): Playlist
+    public static function playlist(string $title = null): Playlist
     {
         return Playlist::make($title);
     }
 
-    public static function radioStation(?string $title = null): RadioStation
+    public static function radioStation(string $title = null): RadioStation
     {
         return RadioStation::make($title);
     }

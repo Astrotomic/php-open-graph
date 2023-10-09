@@ -6,13 +6,13 @@ abstract class TwitterType extends BaseObject
 {
     protected const PREFIX = 'twitter';
 
-    public function __construct(?string $title = null)
+    public function __construct(string $title = null)
     {
         $this->setProperty(self::PREFIX, 'card', $this->type);
         $this->when($title)->title($title);
     }
 
-    public static function make(?string $title = null)
+    public static function make(string $title = null)
     {
         return new static($title);
     }
@@ -38,7 +38,7 @@ abstract class TwitterType extends BaseObject
         return $this;
     }
 
-    public function image(string $image, ?string $alt = null)
+    public function image(string $image, string $alt = null)
     {
         $this->setProperty(self::PREFIX, 'image', $image);
         $this->when($alt)->setProperty(self::PREFIX, 'image:alt', $alt);

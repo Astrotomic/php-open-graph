@@ -8,17 +8,17 @@ use Astrotomic\OpenGraph\Types\Twitter\SummaryLargeImage;
 
 class Twitter
 {
-    public static function summary(?string $title = null): Summary
+    public static function summary(string $title = null): Summary
     {
         return Summary::make($title);
     }
 
-    public static function summaryLargeImage(?string $title = null): SummaryLargeImage
+    public static function summaryLargeImage(string $title = null): SummaryLargeImage
     {
         return SummaryLargeImage::make($title);
     }
 
-    public static function player(?string $title = null): Player
+    public static function player(string $title = null): Player
     {
         return Player::make($title);
     }

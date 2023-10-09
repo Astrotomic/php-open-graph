@@ -9,7 +9,7 @@ class App extends TwitterType
     /** @var string */
     protected $type = 'app';
 
-    public function iPhoneApp(string $name, string $iPhoneAppId, ?string $iPhoneAppUrl = null)
+    public function iPhoneApp(string $name, string $iPhoneAppId, string $iPhoneAppUrl = null)
     {
         $this->setProperty(self::PREFIX, 'app:name:iphone', $name);
         $this->setProperty(self::PREFIX, 'app:id:iphone', $iPhoneAppId);
@@ -20,7 +20,7 @@ class App extends TwitterType
         return $this;
     }
 
-    public function iPadApp(string $name, string $iPadAppId, ?string $iPadAppUrl = null)
+    public function iPadApp(string $name, string $iPadAppId, string $iPadAppUrl = null)
     {
         $this->setProperty(self::PREFIX, 'app:name:ipad', $name);
         $this->setProperty(self::PREFIX, 'app:id:ipad', $iPadAppId);
@@ -31,7 +31,7 @@ class App extends TwitterType
         return $this;
     }
 
-    public function googlePlayApp(string $name, string $googlePlayAppId, ?string $googlePlayAppUrl = null)
+    public function googlePlayApp(string $name, string $googlePlayAppId, string $googlePlayAppUrl = null)
     {
         $this->setProperty(self::PREFIX, 'app:name:googleplay', $name);
         $this->setProperty(self::PREFIX, 'app:id:googleplay', $googlePlayAppId);

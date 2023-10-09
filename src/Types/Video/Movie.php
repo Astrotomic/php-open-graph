@@ -12,7 +12,7 @@ class Movie extends Type
     /** @var string */
     protected $type = 'video.movie';
 
-    public function actor(string $url, ?string $role = null)
+    public function actor(string $url, string $role = null)
     {
         $this->addProperty(self::PREFIX, 'actor', $url);
         $this->when($role)->addProperty(self::PREFIX, 'actor:role', $role);
